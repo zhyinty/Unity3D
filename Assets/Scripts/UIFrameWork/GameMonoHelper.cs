@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace TinyFrameWork
 {
@@ -27,7 +28,7 @@ namespace TinyFrameWork
 
         IEnumerator _LoadGameScene(string strSceneName, bool closeAllUI, Action callBack)
         {
-            op = Application.LoadLevelAsync(strSceneName);
+            op = SceneManager.LoadSceneAsync(strSceneName);
             while (!op.isDone)
                 yield return 0;
 

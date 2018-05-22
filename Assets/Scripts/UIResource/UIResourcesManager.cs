@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class UIResourcesManager : MonoBehaviour
 {
@@ -19,6 +20,6 @@ public class UIResourcesManager : MonoBehaviour
                 GameObject.Destroy(destroyObj[i]);
         }
 
-        Application.LoadLevel("TestEmptyScene");
+        SceneManager.LoadScene("TestEmptyScene");
     }
 }
